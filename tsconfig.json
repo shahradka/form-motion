@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@messages": ["./app/constants/messages.constants.json"],
     }
   },
   "include": [
