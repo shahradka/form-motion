@@ -133,10 +133,4 @@
       transparent 60%
     );
   }
-  .form-item {
-    @apply mb-12;
-  }
-  .form-button-place {
-    @apply pt-20 px-10 flex justify-center;
-  }
 }
