@@ -104,7 +104,7 @@ export const ConselingForm = () => {
         <div className="relative w-full h-25 grow">
           <Image
             src="/road.webp"
-            objectFit="cover"
+            objectFit="fill"
             objectPosition="center"
             fill
             alt="road_img"
