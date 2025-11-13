@@ -8,7 +8,7 @@ export const MobinHeader = ({
   title?: string;
 }) => {
   return (
-    <div className="min-h-[250px] w-full flex flex-col items-center justify-content-center">
+    <div className="min-h-[150px] w-full flex flex-col items-center justify-content-center">
       {children}
       <div className="p-2">
         <TypographyH4>{title}</TypographyH4>

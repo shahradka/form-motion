@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import { Card } from '../ui/card';
+'use client';
 import { AllHTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
 
 export const AppCard = ({
   children,
@@ -11,17 +11,21 @@ export const AppCard = ({
   children?: React.ReactNode;
 } & AllHTMLAttributes<HTMLDivElement>) => {
   return (
-    <Card
-      className={cn(
-        'flex flex-col rounded-b-none border-0! pb-0! overflow-hidden grow bg-primary-foreground items-center justify-end py-2 lg:w-10/12 md:w-10/12',
-        className,
-      )}
-      {...restProps}
+    <motion.div
+      className="w-full flex flex-col items-center justify-center grow"
+      initial={{ scale: 0, opacity: 0, y: 100, transition: { duration: 0.3 } }}
+      animate={{ scale: 1, opacity: 1, y: 0 }}
+      exit={{ scale: 0.5, opacity: 0, y: 100 }}
     >
-      {children}
-      <div className="relative w-full h-65">
-        <Image src="/road.webp" className="w-full" fill alt="road_img"></Image>
+      <div
+        className={cn(
+          'flex flex-col grow items-center justify-end lg:w-10/12 md:w-10/12',
+          className,
+        )}
+        {...restProps}
+      >
+        {children}
       </div>
-    </Card>
+    </motion.div>
   );
 };

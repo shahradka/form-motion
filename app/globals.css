@@ -133,4 +133,7 @@
       transparent 60%
     );
   }
+  .app-card-inside {
+    @apply flex flex-col pt-8 shadow-2xl text-card-foreground bg-card overflow-hidden rounded-tl-xl rounded-tr-xl;
+  }
 }
